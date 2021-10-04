@@ -3,6 +3,7 @@
 
 # put your code here
 import random
+import os
 def restaurant_ratings(file_name):
     file = open(file_name)
     rating_dict = {}
@@ -64,5 +65,11 @@ def change_rating(file_name):
             
     return rating_dict
 
-print(change_rating("scores.txt"))
+def view_upload_files():
+    dir_list = os.listdir()
+    print(dir_list)
+
+
+view_upload_files()
+# print(change_rating("scores.txt"))
 # print(restaurant_ratings("scores.txt"))
